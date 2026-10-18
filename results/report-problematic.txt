@@ -1,0 +1,40 @@
+skillmesh — 4 skill(s), 365 estimated tokens in the mesh
+verdict: CONFLICTS
+
+## token cost
+SKILL                       TOKENS
+--------------------------  ------
+deploy-runbook/SKILL.md     96
+incident-rollback/SKILL.md  104
+release-runbook/SKILL.md    102
+sql-review/SKILL.md         63
+
+## duplicate instructions
+  [3x] 'Always run the linter before committing code changes.'
+        deploy-runbook/SKILL.md:10
+        incident-rollback/SKILL.md:9
+        release-runbook/SKILL.md:10
+  [2x] 'Never commit directly to main.'
+        deploy-runbook/SKILL.md:11
+        release-runbook/SKILL.md:11
+  [2x] 'Tag the release with the version from package.json.'
+        deploy-runbook/SKILL.md:12
+        release-runbook/SKILL.md:12
+  [2x] 'Run the deploy script with the target environment as the first flag.'
+        deploy-runbook/SKILL.md:13
+        release-runbook/SKILL.md:13
+
+## overlapping bodies
+  deploy-runbook/SKILL.md ~ release-runbook/SKILL.md: 41% (33 shared 5-grams)
+
+## conflicting directives
+  [high] about 'run deploy script'
+      ALWAYS  deploy-runbook/SKILL.md:13  'Run the deploy script with the target environment as the first flag'
+      ALWAYS  release-runbook/SKILL.md:13  'Run the deploy script with the target environment as the first flag'
+      NEVER   incident-rollback/SKILL.md:8  'Do not run the deploy script while an incident channel is open'
+
+## trigger problems
+  [missing-trigger] sql-review/SKILL.md: no description/when in front matter — the agent has no way to know when to load it
+
+## parse warnings
+  sql-review/SKILL.md: description is missing or too short to act as a trigger

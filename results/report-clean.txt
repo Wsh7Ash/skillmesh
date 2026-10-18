@@ -1,0 +1,22 @@
+skillmesh — 3 skill(s), 227 estimated tokens in the mesh
+verdict: CLEAN
+
+## token cost
+SKILL                       TOKENS
+--------------------------  ------
+deploy-runbook/SKILL.md     108
+incident-rollback/SKILL.md  59
+sql-review/SKILL.md         60
+
+## duplicate instructions
+  none
+
+## overlapping bodies
+  none
+
+## conflicting directives
+  none
+
+## trigger problems
+  none
+

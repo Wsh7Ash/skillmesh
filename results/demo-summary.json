@@ -1,0 +1,161 @@
+{
+  "clean": {
+    "conflicts": [],
+    "duplicates": [],
+    "overlaps": [],
+    "parse_warnings": [],
+    "per_skill_tokens": {
+      "deploy-runbook/SKILL.md": 108,
+      "incident-rollback/SKILL.md": 59,
+      "sql-review/SKILL.md": 60
+    },
+    "skill_count": 3,
+    "skills": [
+      "deploy-runbook/SKILL.md",
+      "incident-rollback/SKILL.md",
+      "sql-review/SKILL.md"
+    ],
+    "total_tokens": 227,
+    "trigger_issues": [],
+    "verdict": "CLEAN"
+  },
+  "problematic": {
+    "conflicts": [
+      {
+        "negative": [
+          {
+            "line": 8,
+            "modal": "do not",
+            "path": "incident-rollback/SKILL.md",
+            "raw": "Do not run the deploy script while an incident channel is open"
+          }
+        ],
+        "phrase": "run deploy script",
+        "positive": [
+          {
+            "line": 13,
+            "modal": "",
+            "path": "deploy-runbook/SKILL.md",
+            "raw": "Run the deploy script with the target environment as the first flag"
+          },
+          {
+            "line": 13,
+            "modal": "",
+            "path": "release-runbook/SKILL.md",
+            "raw": "Run the deploy script with the target environment as the first flag"
+          }
+        ],
+        "prefer": [],
+        "severity": "high"
+      }
+    ],
+    "duplicates": [
+      {
+        "fingerprint": "485109b918c2",
+        "occurrences": [
+          {
+            "line": 10,
+            "path": "deploy-runbook/SKILL.md",
+            "text": "Always run the linter before committing code changes."
+          },
+          {
+            "line": 9,
+            "path": "incident-rollback/SKILL.md",
+            "text": "Always run the linter before committing code changes."
+          },
+          {
+            "line": 10,
+            "path": "release-runbook/SKILL.md",
+            "text": "Always run the linter before committing code changes."
+          }
+        ],
+        "text": "Always run the linter before committing code changes."
+      },
+      {
+        "fingerprint": "466d8a0b0a78",
+        "occurrences": [
+          {
+            "line": 11,
+            "path": "deploy-runbook/SKILL.md",
+            "text": "Never commit directly to main."
+          },
+          {
+            "line": 11,
+            "path": "release-runbook/SKILL.md",
+            "text": "Never commit directly to main."
+          }
+        ],
+        "text": "Never commit directly to main."
+      },
+      {
+        "fingerprint": "6400db47038d",
+        "occurrences": [
+          {
+            "line": 12,
+            "path": "deploy-runbook/SKILL.md",
+            "text": "Tag the release with the version from package.json."
+          },
+          {
+            "line": 12,
+            "path": "release-runbook/SKILL.md",
+            "text": "Tag the release with the version from package.json."
+          }
+        ],
+        "text": "Tag the release with the version from package.json."
+      },
+      {
+        "fingerprint": "c713f54102fc",
+        "occurrences": [
+          {
+            "line": 13,
+            "path": "deploy-runbook/SKILL.md",
+            "text": "Run the deploy script with the target environment as the first flag."
+          },
+          {
+            "line": 13,
+            "path": "release-runbook/SKILL.md",
+            "text": "Run the deploy script with the target environment as the first flag."
+          }
+        ],
+        "text": "Run the deploy script with the target environment as the first flag."
+      }
+    ],
+    "overlaps": [
+      {
+        "a": "deploy-runbook/SKILL.md",
+        "b": "release-runbook/SKILL.md",
+        "kind": "body",
+        "score": 0.412
+      }
+    ],
+    "parse_warnings": [
+      {
+        "path": "sql-review/SKILL.md",
+        "warning": "description is missing or too short to act as a trigger"
+      }
+    ],
+    "per_skill_tokens": {
+      "deploy-runbook/SKILL.md": 96,
+      "incident-rollback/SKILL.md": 104,
+      "release-runbook/SKILL.md": 102,
+      "sql-review/SKILL.md": 63
+    },
+    "skill_count": 4,
+    "skills": [
+      "deploy-runbook/SKILL.md",
+      "incident-rollback/SKILL.md",
+      "release-runbook/SKILL.md",
+      "sql-review/SKILL.md"
+    ],
+    "total_tokens": 365,
+    "trigger_issues": [
+      {
+        "a": "sql-review/SKILL.md",
+        "b": null,
+        "detail": "no description/when in front matter — the agent has no way to know when to load it",
+        "kind": "missing-trigger"
+      }
+    ],
+    "verdict": "CONFLICTS"
+  }
+}
